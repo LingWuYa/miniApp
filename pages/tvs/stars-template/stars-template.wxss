@@ -1,0 +1,12 @@
+.stars {
+  display: flex;
+  flex-direction: row;
+  /* height: 20px; */
+}
+
+.star {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right:5rpx;
+  display: inline-block;  
+}

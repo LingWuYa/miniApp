@@ -1,0 +1,55 @@
+<!--pages/home/home.wxml-->
+ <import src="../tvs/tvItem-template/tvItem-template.wxml" /> 
+<swiper indicator-dots="{{indicatorDots}}"
+current='{{swiperCurrent}}'   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" previous-margin='{{previousMargin}}' next-margin='{{nextMargin}}' indicator-color="{{beforeColor}}" indicator-active-color="{{activeColor}}" bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" id="{{index}}" class="{{index == swiperCurrent ? ' active' : ''}}" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="section-title clearfix">
+  <text class="title">影音</text>
+  <text class="desc">天下归元原著改编影视</text>
+  <text class="more" catchtap='getMore' data-more="tvs">更多</text>
+</view>
+
+<view class="tvs">
+ <view class='tvs-item'>
+    <template is="tvItemTemplate"  data="{{...fydata}}" /> 
+</view>
+ <view class='tvs-item'>
+    <template is="tvItemTemplate"  data="{{...hqdata}}" /> 
+</view>
+</view>
+
+<view class="section-title">
+  <text class="title">新书热卖</text>
+  <text class="desc">《扶摇皇后》新版8月签售</text>
+  <text class="more"catchtap='getMore' data-more="books">更多</text>
+</view>
+
+<view class="books">
+  <!-- <block> -->
+    <view class="book-item">
+       <image src="/images/fuyao-book.jpg"></image> 
+      <view class="book-info clearfix">
+        <text class="book-price">￥99.00</text>
+        <text class="book-source">白马时光出品</text>
+      </view>
+      <text class="book-name">扶摇皇后（套装全6册）无删减完整版+新增全新番外,附赠“掌心莲”图卷</text>
+      <text class="book-desc">鸾凤一日同风起，扶摇直上九万里。</text>
+    </view>
+    <view class="book-item">
+       <image src="/images/huangquan-book.jpg"></image> 
+      
+      <view class="book-info clearfix">
+        <text class="book-price">￥99.00</text>
+        <text class="book-source">白马时光出品</text>
+      </view>  
+      <text class="book-name">凰权（套装全6册）无删减完整版+新增万字番外,附赠“擢英卷”图卷</text>
+      <text class="book-desc">江山惊澜风云起，皇权倾轧爱恨生。</text>
+    </view>
+  <!-- </block> -->
+</view>

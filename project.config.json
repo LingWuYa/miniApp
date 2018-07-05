@@ -1,0 +1,64 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.1",
+	"appid": "wxb0c8d7c19253e21e",
+	"projectname": "%E5%B8%9D%E4%BA%AC%E6%9D%82%E8%AE%B0",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "books",
+					"pathName": "pages/books/books",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tvs",
+					"pathName": "pages/tvs/tvs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shop",
+					"pathName": "pages/shop/shop",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine"
+				}
+			]
+		}
+	}
+}

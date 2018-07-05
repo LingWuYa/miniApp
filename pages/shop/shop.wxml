@@ -1,0 +1,53 @@
+<!--pages/shop/shop.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+current='{{swiperCurrent}}'   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-color="{{beforeColor}}" indicator-active-color="{{activeColor}}" bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" id="{{index}}" class="{{index == swiperCurrent ? ' active' : ''}}" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="section-title">
+  <text class="title">周边兑换<text class="all">全部</text></text>
+</view>
+
+<view class="shop-category">
+   <view class="row1">
+      <view class="category-item">
+        <text class="category-name">明信片</text>
+        <image class="category-img"src="/images/shop/posters.png"></image>
+      </view>
+
+      <view class="category-item">
+        <text class="category-name">胶带</text>
+        <image class="category-img"src="/images/shop/jiaodai.png"></image>
+      </view>
+      <view class="category-item">
+        <text class="category-name">书签</text>
+        <image class="category-img"src="/images/shop/bookmarks.png"></image>
+      </view>
+      <view class="category-item">
+        <text class="category-name">手机壳</text>
+        <image class="category-img"src="/images/shop/phonecloths.png"></image>
+      </view>
+   </view>
+   <view class="row2">
+   <view class="category-item">
+      <text class="category-name">饰品</text>
+      <image class="category-img"src="/images/shop/shipin.png"></image>
+   </view>
+   <view class="category-item">
+    <text class="category-name">卡贴</text>
+     <image class="category-img"src="/images/shop/katie.png"></image>
+   </view>
+   <view class="category-item">
+     <text class="category-name">杯垫</text>
+      <image class="category-img"src="/images/shop/beidian.png"></image>
+   </view>
+   <view class="category-item">
+    <text class="category-name">其他</text>
+     <image class="category-img"src="/images/shop/others.png"></image>
+   </view>
+   </view>
+</view>

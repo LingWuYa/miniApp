@@ -1,0 +1,26 @@
+<!--pages/tvs/tvs.wxml-->
+ <import src="tvItem-template/tvItem-template.wxml" /> 
+ 
+<view class="tvs">
+ <view class='tvs-item'>
+    <template is="tvItemTemplate"  data="{{...fydata}}" /> 
+</view>
+ <view class='tvs-item'>
+    <template is="tvItemTemplate"  data="{{...hqdata}}" /> 
+</view>
+</view>
+
+<block class="music" wx:for="{{musicList}}" wx:key="{{index}}">
+  <view class="music-item" data-musicid="{{item.musicId}}" bindtap='playMusic'>
+      <image src="{{item.coverImg}}" class="music-poster"></image>
+      <view class="mask">
+         <image src="{{musicPlayStatus && item.musicId === currentMusicId?'/images/icon/icon_music/pause.png':'/images/icon/icon_music/playcircleo.png'}}" class="music-icon"></image>
+      </view>
+    <view class="music-desc">
+       <text class="music-title">{{item.title}}——{{item.author}}</text>
+       <!-- <text class="music-author"></text> -->
+       <text class="music-info">{{item.desc}}</text>
+       <text class="music-detail">{{item.detail}}</text>
+    </view>
+  </view>
+</block>

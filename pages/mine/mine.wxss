@@ -1,0 +1,92 @@
+/* pages/mine/mine.wxss */
+
+.mine-outer {
+  box-sizing: border-box; 
+  margin: 15px 10px;
+  border-radius: 5px;
+  box-shadow: -2px 2px 1px 1px whitesmoke,
+                        0px 0px 1px 1px whitesmoke;
+  background:url("http://wx4.sinaimg.cn/large/67d658d6gy1fsz0nrqk37j20s909dn0l.jpg") ;
+   background-size: cover; 
+}
+.mine-users {
+  border-radius: 5px;
+  display: flex;
+  padding: 20px 10px;
+  background: rgba(0,0,0,.2);
+  
+}
+.mine-avatar {
+  flex: 1;
+}
+
+.user-info .mine-username {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10rpx 0;
+}
+
+.user-info .mine-add {
+  color: whitesmoke;
+}
+
+.mine-avatar image{
+  display: block;
+  width: 150rpx;
+  height:150rpx;
+  /* border: 1px solid #ddd; */
+  border-radius: 50%;
+  /* box-shadow: 1px 1px 1px 1px #eee; */
+  margin: 0 auto;
+}
+
+.user-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mine-main {
+  display: 100%;
+  margin: 0px 10px;
+}
+
+.mine-item {
+  border-bottom: 1px solid whitesmoke;
+  /* box-shadow: 0 1px 1px 1px whitesmoke; */
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx 15rpx;
+  margin: 5px 0;
+}
+
+.mine-item .item-left {
+  font-size: 13px;
+}
+
+.mine-item .item-right {
+  color: #999;
+}
+
+.mine-item .item-right .points {
+  color: #d81e06;
+  font-weight:bold;
+}
+
+.footer {
+  width:100%;
+  position:fixed;
+  bottom: 15px;
+  color: #ddd;
+  text-align: center;
+  /* margin: 15px 0; */
+}
+
+.footer text {
+  width: 100%;
+  display: block;
+  margin: 10rpx 0;
+}

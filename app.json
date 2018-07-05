@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/tvs/tvs",
+    "pages/books/books",
+    "pages/shop/shop",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "帝京杂记",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#d81e06",
+    "list": [
+    {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/images/icon/icon_#8a8a8a/home.png",
+      "selectedIconPath": "/images/icon/icon_#d81e06/home.png"
+    },
+    {
+      "pagePath": "pages/tvs/tvs",
+      "text": "影音",
+      "iconPath": "/images/icon/icon_#8a8a8a/film.png",
+      "selectedIconPath": "/images/icon/icon_#d81e06/film.png"
+    },
+    {
+      "pagePath": "pages/books/books",
+      "text": "书与文",
+      "iconPath": "/images/icon/icon_#8a8a8a/books.png",
+      "selectedIconPath": "/images/icon/icon_#d81e06/books.png"
+    },
+    {
+      "pagePath": "pages/shop/shop",
+      "text": "商铺",
+      "iconPath": "/images/icon/icon_#8a8a8a/shop.png",
+      "selectedIconPath": "/images/icon/icon_#d81e06/shop.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "/images/icon/icon_#8a8a8a/mine.png",
+      "selectedIconPath": "/images/icon/icon_#d81e06/mine.png"
+    }
+    ]
+  }
+}

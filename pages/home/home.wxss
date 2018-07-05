@@ -1,0 +1,114 @@
+/* pages/home/home.wxss */
+@import '../tvs/tvItem-template/tvItem-template.wxss';
+swiper {
+  display: block;
+  height: 410rpx;
+}
+
+swiper image {
+  width: 98%;
+  height: 350rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px 2px rgba(0,0,0,.3);  
+}
+
+.active {
+  margin-top: 0;
+  height: 400rpx;
+}
+.section-title {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.section-title .title{
+  font-weight: 700;
+  font-size: 13px;
+  width: 100%;
+  display: block;
+}
+
+.section-title .desc{
+   display: block;
+  width: 100%;
+  color: #bbb;
+  margin: 5px 0 8px 0;
+}
+
+.more {
+  display: block;
+  color: #d81e06;
+}
+
+.tvs {
+  width: 100%;
+  padding: 10px 0;
+  background: rgb(250,250,250);
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around;   */
+}
+
+ .tvs-item {
+      flex: 1;     
+     margin: 0 5px;     
+} 
+
+.books {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  background: rgb(250,250,250);
+  flex-direction: row;
+}
+
+.book-item {
+  flex: 1; 
+  flex-direction: column;
+  margin: 0 5px;  
+  background: #fff;
+  padding: 10px;
+  border-radius:  5px;
+  box-shadow: 1px 1px 1px 1px #eee;
+}
+
+.book-item image{
+  display: block;
+  width: 80%;
+  height: 300rpx;
+  margin: 0 auto;
+}
+
+.book-price {
+ color:#d81e06;
+ float: left;
+}
+
+.book-source {
+  color: #bbb;
+  float: right;
+}
+
+.book-info {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.book-name {
+  display: block;
+ margin-bottom: 5px;
+ overflow : hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+}
+
+.book-desc{
+  display: block;
+  color: #bbb;
+  font-size: 10px;
+}

@@ -1,0 +1,28 @@
+@import "../stars-template/stars-template.wxss";
+.tv {
+  width:100%;
+  background: #fff;
+  padding: 10px;
+  border-radius:  5px;
+  box-shadow: 1px 1px 1px 1px #eee;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.tv .tv-poster {
+  display: block;
+  width: 100%; 
+  height: 450rpx;
+  margin-bottom: 5px;
+}
+.tv-info, .tv-rating {
+ /* width: 100%; */
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+.tv-ison {
+  color: #d81e06;
+  font-size: 11px;
+}

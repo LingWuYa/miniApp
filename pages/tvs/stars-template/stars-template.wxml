@@ -1,0 +1,7 @@
+<template name="starsTemplate">
+  <block wx:for="{{stars}}" wx:key="index">
+     <image class="star" wx:if="{{item==1}}" src="/images/icon/star01.png"></image>
+    <image class="star"wx:elif="{{item==2}}" src="/images/icon/star02.png"></image> 
+    <image class="star"wx:else src="/images/icon/star03.png"></image>
+  </block>
+</template>

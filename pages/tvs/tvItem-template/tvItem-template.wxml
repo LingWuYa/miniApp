@@ -1,0 +1,18 @@
+<import src="../stars-template/stars-template.wxml" />
+<template name="tvItemTemplate">
+  <view class="tv">
+    <image class="tv-poster" src="{{imgurl}}"></image>
+    <view class="tv-info">
+       <text class="tv-name">{{name}}</text>
+       <text class="tv-ison">{{ison?'正在热映':'即将上映'}}</text>
+    </view>
+    <view class='tv-rating'>
+        <view class="tv-stars">
+            <template is="starsTemplate" data = "{{stars}}"/>  
+        </view>
+        <view>
+          <text class="tv-score">{{score}}</text>
+        </view>
+    </view>
+  </view>
+</template>

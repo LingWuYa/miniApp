@@ -1,0 +1,89 @@
+<!--pages/books/books.wxml-->
+  <scroll-view class="scroll-view_H" scroll-x>
+    <view id="green" class="scroll-view-item_H">
+      <image src="http://img3m7.ddimg.cn/59/31/25259117-2_u_3.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">扶摇皇后</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+    <view id="red"  class="scroll-view-item_H">
+      <image src="http://img3m9.ddimg.cn/4/8/25125709-2_u_3.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">凰权</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+    <view id="yellow" class="scroll-view-item_H">
+     <image src="http://img3m6.ddimg.cn/49/24/25208716-1_u_6.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">女帝本色</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+    <view id="blue" class="scroll-view-item_H">
+     <image src="http://img3m3.ddimg.cn/66/4/23597013-1_u_1.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">凤倾天阑</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+    <view id="blue" class="scroll-view-item_H">
+     <image src="http://img3m4.ddimg.cn/15/32/23191854-1_u_1.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">千金笑</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+    <view id="blue" class="scroll-view-item_H">
+     <image src="http://img3m5.ddimg.cn/35/3/22510655-1_u_1.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">帝凰</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+    <view id="blue" class="scroll-view-item_H">
+     <image src="http://img3m0.ddimg.cn/58/5/23321290-1_u_2.jpg"></image>
+      <view class="book-info clearfix">
+        <text class="book-name">燕倾天下</text>
+        <text class="book-price">￥99.00</text>
+      </view>
+    </view>
+  </scroll-view>
+
+<view class="section-title">
+  <text class="title">帝京流行</text>
+</view>
+
+<view class="popular-books">
+  <view class="popular-item">
+  <view class="item-image">
+    <image src="/images/book/tongju.png"></image>
+  </view>
+    <view class="item-desc">
+      <text class="item-name">《我和两位帝王同居的日子》</text>
+      <text class="item-author">作者：宁澄</text>
+      <text class="item-info">帝王隐退实录，小主子诞生记</text>
+    </view>
+  </view>
+  <view class="popular-item">
+    <view class="item-image">
+      <image src="/images/book/xiliangmenghualu.png"></image>
+    </view>
+    <view class="item-desc">
+      <text class="item-name">《西凉梦华录》</text>
+      <text class="item-author">作者：宁澄</text>
+      <text class="item-info">又名大成女帝昔日八卦录</text>
+    </view>
+  </view>
+  <view class="popular-item">
+    <view class="item-image">
+      <image src="/images/book/dijingzaji.png"></image>
+    </view>
+    <view class="item-desc">
+      <text class="item-name">《帝京杂记》</text>
+      <text class="item-author">作者：七王府</text>
+      <text class="item-info">天盛奇闻怪谈八卦故事汇</text>
+    </view>
+  </view>
+</view>
