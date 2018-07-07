@@ -9,7 +9,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "帝京杂记",
+    "navigationBarTitleText": "天盛集",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
