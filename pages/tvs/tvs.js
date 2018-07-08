@@ -38,7 +38,6 @@ Page({
   setMusicMonitor: function() {
     var that = this;
     wx.onBackgroundAudioPlay(function(event){
-      console.log("onplay")
       app.globalData.g_isPlayingMusic = true;
       that.setData({
         musicPlayStatus: app.globalData.g_isPlayingMusic,
@@ -46,7 +45,6 @@ Page({
     })
 
     wx.onBackgroundAudioPause(function(e) {
-      console.log("onpause")
       app.globalData.g_isPlayingMusic = false;
       that.setData({
         musicPlayStatus: app.globalData.g_isPlayingMusic ,
@@ -55,7 +53,6 @@ Page({
     })
 
     wx.onBackgroundAudioStop(function(e){
-      console.log("onstop")
       app.globalData.g_isPlayingMusic = false;
       that.setData({
         musicPlayStatus: !that.data.musicPlayStatus,
@@ -64,7 +61,6 @@ Page({
     })
   },
   playMusic: function(e) {
-    // console.log('e',e);
     var musicId = e.currentTarget.dataset.musicid;
     if (this.data.currentMusicId === musicId) {
       app.globalData.g_isPlayingMusic = false;
@@ -75,7 +71,6 @@ Page({
       wx.pauseBackgroundAudio();
     }else {
       app.globalData.g_isPlayingMusic = true;
-      console.log('musicId', musicId)
       this.setData({
         musicPlayStatus: app.globalData.g_isPlayingMusic,
         currentMusicId: musicId
