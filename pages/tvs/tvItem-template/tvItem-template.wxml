@@ -1,6 +1,6 @@
 <import src="../stars-template/stars-template.wxml" />
 <template name="tvItemTemplate">
-  <view class="tv">
+  <view class="tv" bindtap='ontvtap' data-tvid="{{id}}">
     <image class="tv-poster" src="{{imgurl}}"></image>
     <view class="tv-info">
        <text class="tv-name">{{name}}</text>

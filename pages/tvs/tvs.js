@@ -27,6 +27,12 @@ Page({
       hqdata: hqdata
     })
   },
+  ontvtap: function(event){
+    var tvid = event.currentTarget.dataset.tvid;
+    wx.navigateTo({
+      url: 'tvdetail/tvdetail?id='+tvid,
+    })
+  },
 
   setMusicMonitor: function() {
     var that = this;

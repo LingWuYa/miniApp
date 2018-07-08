@@ -63,11 +63,18 @@ Page({
 
   getMore: function(event) {
     const tourl = event.target.dataset.more;
-    console.log(tourl)
     wx.switchTab({
       url: '../'+tourl+'/'+tourl,
     })
   },
+
+  ontvtap: function (event) {
+    var tvid = event.currentTarget.dataset.tvid;
+    wx.navigateTo({
+      url: '/pages/tvs/tvdetail/tvdetail?id=' + tvid,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

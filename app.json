@@ -4,7 +4,8 @@
     "pages/tvs/tvs",
     "pages/books/books",
     "pages/shop/shop",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/tvs/tvdetail/tvdetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
