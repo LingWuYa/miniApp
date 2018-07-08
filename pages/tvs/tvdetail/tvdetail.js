@@ -1,4 +1,6 @@
 // pages/tvdetail/tvdetail.js
+const utils = require("../../../utils/util.js");
+const app = getApp();
 Page({
 
   /**
@@ -12,14 +14,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("id",options.id);
+    const tvid = options.id;
+    const baseUrl = app.globalData.doubanBaseUrl;
+    const requrl = baseUrl + '/v2/movie/subject/'+tvid;
+    utils.http(requrl, 'tvData', this.formatTvData);
   },
 
+  formatTvData: function(data){
+    console.log(data);
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    // wx.setNavigationBarTitle({
+    //   title: '',
+    // })
   },
 
   /**

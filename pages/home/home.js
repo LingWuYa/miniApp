@@ -1,5 +1,6 @@
 // pages/home/home.js
-var util = require('../../utils/util.js');
+var utils = require('../../utils/util.js');
+var app = getApp();
 Page({
 
   /**
@@ -32,33 +33,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const fuyaourl = 'https://douban.uieee.com/v2/movie/subject/26640097';
-    const hqurl = 'https://douban.uieee.com/v2/movie/subject/26761328';
-    this.getTvData(fuyaourl,'fydata');
-    this.getTvData(hqurl, 'hqdata');
+    const baseUrl = app.globalData.doubanBaseUrl;
+    const fuyaourl = baseUrl+  '/v2/movie/subject/26640097';
+    const hqurl = baseUrl + '/v2/movie/subject/26761328';
+    utils.http(fuyaourl, 'fydata', this.formatTvData);
+    utils.http(hqurl, 'hqdata', this.formatTvData);
   },
 
   getTvData: function(url,dataName){
-    const that = this;
-    wx.request({
-      url: url,
-      data: '',
-      header: { 'content-type': 'json' },
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: function (res) {
-        if (res.statusCode == 200) {
-          const tvData = {};
-          tvData[dataName] = util.formatTvs(res.data);
-          tvData[dataName].stars = util.formatStars(tvData[dataName].stars);
-          that.setData(tvData);
-          wx.setStorageSync(dataName, tvData[dataName]);
-        }
-      },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
+    utils.http(url,dataName,this.formatTvData);
+  },
+
+  formatTvData: function (data, dataName) {
+    const tvData = {};
+    tvData[dataName] = utils.formatTvs(data);
+    tvData[dataName].stars = utils.formatStars(tvData[dataName].stars);
+    this.setData(tvData);
+    wx.setStorageSync(dataName, tvData[dataName]);
   },
 
   getMore: function(event) {

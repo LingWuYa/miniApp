@@ -44,8 +44,27 @@ const convertToStarsArray = stars => {
   return array;
 }
 
+const http = (url,dataName,callback) => {
+  wx.request({
+    url: url,
+    data: '',
+    header: { 'content-type': 'json' },
+    method: 'GET',
+    dataType: 'json',
+    responseType: 'text',
+    success: function (res) {
+      if (res.statusCode == 200) {
+        callback(res.data, dataName);
+      }
+    },
+    fail: function (res) { },
+    complete: function (res) { },
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
   formatTvs: formatDoubanMovieData,
-  formatStars: convertToStarsArray
+  formatStars: convertToStarsArray,
+  http: http
 };
