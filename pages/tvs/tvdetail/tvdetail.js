@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**
@@ -22,7 +22,7 @@ Page({
     });
     const baseUrl = app.globalData.doubanBaseUrl;
     const requrl = baseUrl + '/v2/movie/subject/'+tvid;
-    utils.http(requrl, 'tvData', this.formatTvData);
+    utils.http(requrl, 'movie', this.formatTvData);
   },
 
   formatTvData: function(data, name){

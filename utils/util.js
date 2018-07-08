@@ -16,7 +16,7 @@ const formatNumber = n => {
 
 const formatDoubanMovieData = data => {
   const obj = {};
-  obj.name = data.aka[0];
+  obj.name = data.title;
   obj.id = data.id;
   obj.imgurl = data.images.small;
   obj.score = data.rating.average;

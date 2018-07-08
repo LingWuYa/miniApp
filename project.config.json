@@ -58,6 +58,12 @@
 					"name": "mine",
 					"pathName": "pages/mine/mine",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tvdetail-hq",
+					"pathName": "pages/tvs/tvdetail/tvdetail",
+					"query": "id=26761328&title=天盛长歌"
 				}
 			]
 		}
