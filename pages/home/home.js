@@ -61,8 +61,9 @@ Page({
 
   ontvtap: function (event) {
     var tvid = event.currentTarget.dataset.tvid;
+    var title = event.currentTarget.dataset.title;
     wx.navigateTo({
-      url: '/pages/tvs/tvdetail/tvdetail?id=' + tvid,
+      url: "/pages/tvs/tvdetail/tvdetail?id="+tvid+"&title="+title,
     })
   },
 
