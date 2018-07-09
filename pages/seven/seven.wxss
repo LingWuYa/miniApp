@@ -1,0 +1,64 @@
+/* pages/seven/seven.wxss */
+.head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+   text-align: center; 
+   padding: 10px 0;
+   /* background: whitesmoke; */
+}
+
+.title {
+  font-size:13px;
+  font-weight: bold;
+  color: #d81e06;
+  margin: 5px 0;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  margin:20px 10px;
+}
+
+.row-title {
+  width: 100%;
+  border-left: 3px solid #d81e06;
+  text-indent: 1em;
+  font-weight: bold;
+  display: block;
+  margin: 5px 0;
+}
+
+.item {
+  margin: 20px 0;
+  box-shadow: 1px 2px 1px 1px #f2f2f2;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  /* vertical-align: middle; */
+}
+.weiboinfo {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.item .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin:0 10px;
+}
+
+.username {
+  font-weight: bold;
+  margin: 5px 0;
+  /* margin-right: 5px; */
+}
+
+/* .avatar, .username, .weibo {
+  vertical-align: middle;
+} */

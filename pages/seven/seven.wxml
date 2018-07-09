@@ -1,0 +1,49 @@
+<!--pages/seven/seven.wxml-->
+<view class="head">
+<text class="title">选“秀”Day1</text>
+<text class="head-desc">——赫连铮爬墙事件——</text>
+</view>
+
+<view class="row">
+  <text class="row-title">今日“蒂花之秀”</text>
+  <view class="item">
+  <image class="avatar" src="http://ww1.sinaimg.cn/mw690/bf1f775bjw8enn0gnupsvj20c80dkgmq.jpg"></image>
+    <view class="weiboinfo">
+    <text class="username">瓶心之泪</text>
+    <text class="weibo">墙头野草的自述:那一夜我看见了太多</text>
+  </view>
+
+  </view>
+</view>
+
+<view class="row">
+  <text class="row-title">天选“秀”女</text>
+
+  <view class="item">
+  <image class="avatar" src="http://wx3.sinaimg.cn/mw690/7a128c67ly8fpxhyagnyej20ro0rojx1.jpg"></image>
+    <view class="weiboinfo">
+    <text class="username">姈琅</text>
+    <text class="weibo">最是那一根毛的风情——爬墙世子纪实报道</text>
+  </view>
+  </view>
+
+  <view class="item">
+  <image class="avatar" src="http://wx2.sinaimg.cn/mw690/6a4643ealy8fsxotn50l3j20ro0ro0tl.jpg"></image>
+  <view class="weiboinfo">
+      <text class="username">俺是纯洁滴娃</text>
+      <text class="weibo">赫连世子激情一夜:丢人又丢毛</text>
+  </view>
+  </view>
+
+  <view class="item">
+  <image class="avatar" src="http://ww4.sinaimg.cn/mw690/8a076036jw8fd8fpqybuqj20ig0igaau.jpg"></image>
+    <view class="weiboinfo">
+      <text class="username">彼年之华sharey</text>
+      <text class="weibo">雨夜爬墙为哪般，风吹裤裆蛋毛藏</text>
+  </view>
+
+  </view>
+
+</view>
+
+
