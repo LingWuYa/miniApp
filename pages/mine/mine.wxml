@@ -2,10 +2,13 @@
 <view class="mine-outer">
 <view class="mine-users">
    <view class="mine-avatar">
-    <image src="http://ww4.sinaimg.cn/large/67d658d6jw8f86xk67ta7j20hs0hsgnb.jpg"></image>
+       <!-- <open-data  type="userAvatarUrl"></open-data> -->
+     <image src="{{userInfo.avatarUrl}}"></image> 
   </view>
   <view class="user-info">
-    <text class="mine-username">楚王妃</text>
+
+    <!-- <open-data class="mine-username" type="userNickName"></open-data> -->
+     <text class="mine-username">{{userInfo.nickName}}</text> 
     <text class="mine-add">收货地址：<text class="address">天盛帝京天水大街楚王府</text></text>
   </view>
 </view>
@@ -36,8 +39,12 @@
     <text class="item-left">兑换指南</text>
     <text class="item-right">></text>
   </view>
-
 </view>
+
+
+<!-- 需要使用 button 来授权登录 -->
+ <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> 
 
 <view class="footer">
   <text>本小程序解释权归凌无涯所有</text>
