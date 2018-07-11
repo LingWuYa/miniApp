@@ -1,42 +1,66 @@
 // pages/mine/mine.js
+const app= getApp();
 Page({
   
   /**
    * 页面的初始数据
    */
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    isUserDataGet: app.globalData.userInfo.nickName?true:false,
+    userInfo:{
+      nickName: "昵称",
+      avartarUrl: "/images/shop/others.png"
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getSetting({
-      success: function (res) {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-          wx.getUserInfo({
-            success: function (res) {
-              console.log(res.userInfo)
-            }
-          })
-        }
-      }
-    })
+      
+    // wx.getUserInfo({
+    //   withCredentials: false,
+    //   lang:"zh_CN",
+    //   timeout: 1000,
+    //   success: function(res){
+    //     console.log('res',res);
+    //   }
+    // })
+    // wx.showModal({
+    //   title: '微信授权',
+    //   content: '天盛集申请获得以下权限：获得你的公开信息（昵称，头像等）',
+    //   success: function (res) {
+    //     if (res.confirm) {
+    //       console.log('用户点击确定')
+    //     } else if (res.cancel) {
+    //       console.log('用户点击取消')
+    //     }
+    //   }
+    // })
+    
   },
-  bindGetUserInfo: function (e) {
+  onGotUserInfo: function (e) {
     this.setData({
-      userInfo: e.detail.userInfo
+      userInfo: e.detail.userInfo,
+      isUserDataGet: true
     })
-     wx.setStorageSync("userInfo", e.detail.userInfo)
-    // console.log(e.detail.userInfo)
+    app.globalData.userInfo = e.detail.userInfo;
+    //  wx.setStorageSync("userInfo", e.detail.userInfo)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    if (app.globalData.userInfo.nickName) {
+      this.setData({
+        userInfo: {
+          nickName: app.globalData.userInfo.nickName,
+          avatarUrl: app.globalData.userInfo.avatarUrl,
+        },
+        isUserDataGet: true
+      })
+    }
   },
 
   /**

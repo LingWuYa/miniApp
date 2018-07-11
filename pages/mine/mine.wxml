@@ -1,9 +1,10 @@
 <!--pages/mine/mine.wxml-->
-<view class="mine-outer">
+<view class="mine-container">
+  <view class="mine-outer">
 <view class="mine-users">
    <view class="mine-avatar">
        <!-- <open-data  type="userAvatarUrl"></open-data> -->
-     <image src="{{userInfo.avatarUrl}}"></image> 
+     <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/images/shop/others.png'}}"></image> 
   </view>
   <view class="user-info">
 
@@ -41,12 +42,20 @@
   </view>
 </view>
 
-
-<!-- 需要使用 button 来授权登录 -->
- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-<view wx:else>请升级微信版本</view> 
-
-<view class="footer">
+<!-- <view class="footer">
   <text>本小程序解释权归凌无涯所有</text>
   <text>2018-07-07 © 凌无涯</text>
+</view> -->
+</view>
+
+<view wx:if="{{!isUserDataGet}}" class="confirm-mask">
+<!-- 需要使用 button 来授权登录 -->
+<view class="confirm-box" wx:if="{{canIUse}}">
+    <text class="confirm-desc title">授权登录后可以:</text>
+    <text  class="confirm-desc confirm-text">查看个人周边兑换点数</text>
+    <text  class="confirm-desc confirm-text">使用并查看购物车订单</text>
+    
+    <button  class="comfirm-button" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权登录</button>
+</view>
+   <view wx:else class="updateText">请升级微信版本</view>  
 </view>
