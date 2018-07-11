@@ -9,35 +9,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     isUserDataGet: app.globalData.userInfo.nickName?true:false,
     userInfo:{
-      nickName: "昵称",
+      nickName: "个人昵称",
       avartarUrl: "/images/shop/others.png"
-    }
+    },
+    myAdd: wx.getStorageSync("address")?wx.getStorageSync("address").addressDetail:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      
-    // wx.getUserInfo({
-    //   withCredentials: false,
-    //   lang:"zh_CN",
-    //   timeout: 1000,
-    //   success: function(res){
-    //     console.log('res',res);
-    //   }
-    // })
-    // wx.showModal({
-    //   title: '微信授权',
-    //   content: '天盛集申请获得以下权限：获得你的公开信息（昵称，头像等）',
-    //   success: function (res) {
-    //     if (res.confirm) {
-    //       console.log('用户点击确定')
-    //     } else if (res.cancel) {
-    //       console.log('用户点击取消')
-    //     }
-    //   }
-    // })
     
   },
   onGotUserInfo: function (e) {
@@ -48,6 +29,37 @@ Page({
     app.globalData.userInfo = e.detail.userInfo;
     //  wx.setStorageSync("userInfo", e.detail.userInfo)
   },
+
+  addAddress:function(e){
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          var that = this;
+          wx.getLocation({
+            type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+            success: function (res) {
+              // console.log(res)
+              // var latitude = res.latitude
+              // var longitude = res.longitude
+              wx.chooseAddress({
+                success: function (res) {
+                  that.setData({
+                    myAdd: res.cityName + res.countyName + res.detailInfo
+                  })
+                  wx.setStorageSync("address", {
+                    addressDetail: res.provinceName + res.cityName + res.countyName + res.detailInfo,
+                    teliphone:res.telNumber,
+                    userName:res.userName
+                  })
+                }
+              })
+            }
+          })
+        }
+      }
+    }) 
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

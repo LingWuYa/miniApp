@@ -31,6 +31,17 @@
   color: whitesmoke;
 }
 
+.add-btn {
+  /* display: inline-block; */
+  font-size: 12px;
+   width:150rpx; 
+  text-align: center;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 0;
+  color:whitesmoke;
+}
 .mine-avatar image{
   display: block;
   width: 150rpx;
@@ -72,6 +83,7 @@
 .mine-item .item-right .points {
   color: #d81e06;
   font-weight:bold;
+  padding-right: 10rpx;
 }
 
 .footer {

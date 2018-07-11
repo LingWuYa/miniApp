@@ -9,8 +9,9 @@
   <view class="user-info">
 
     <!-- <open-data class="mine-username" type="userNickName"></open-data> -->
-     <text class="mine-username">{{userInfo.nickName}}</text> 
-    <text class="mine-add">收货地址：<text class="address">天盛帝京天水大街楚王府</text></text>
+     <text class="mine-username">{{userInfo.nickName}}</text>
+     <view wx:if="{{!myAdd}}" class="add-btn" catchtap='addAddress'>添加收件地址</view> 
+    <text class="mine-add address" wx:else>{{myAdd}}</text>
   </view>
 </view>
 </view>
@@ -26,9 +27,9 @@
     <text class="item-right"><text class="points">10</text>点</text>
   </view>
 
-  <view class="mine-item">
+  <view class="mine-item" catchtap='addAddress'>
     <text class="item-left">我的地址</text>
-    <text class="item-right">></text>
+    <text class="item-right">修改 ></text>
   </view>
 
   <view class="mine-item">

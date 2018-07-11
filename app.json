@@ -1,13 +1,12 @@
 {
   "pages":[
-   
+    "pages/seven/seven",
     "pages/home/home",
     "pages/tvs/tvs",
     "pages/books/books",
     "pages/shop/shop",
     "pages/mine/mine",
     "pages/tvs/tvdetail/tvdetail",
-    "pages/seven/seven"
   ],
   "window":{
     "backgroundTextStyle":"light",
