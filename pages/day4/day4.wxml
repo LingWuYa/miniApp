@@ -1,4 +1,3 @@
-<!--pages/seven/seven.wxml-->
 <view class="head">
 <text class="title">选“秀”Day4</text>
 <text class="head-desc">——大闹青溟书院——</text>
@@ -9,32 +8,32 @@
   <view class="item">
   <image class="avatar" src="http://wx1.sinaimg.cn/mw690/006una53ly8fqcncc89ezj30ro0ron0b.jpg"></image>
     <view class="weiboinfo">
-    <text class="username">鲸上kwi</text>
+    <text class="username">
+鲸上kwi</text>
     <text class="weibo">应司业邀请 楚王殿下亲临书院视察白皮猪</text>
   </view>
-
   </view>
 </view>
 
 <view class="row">
-  <text class="row-title">天选“秀”女</text>
+  <text class="row-title">待召“秀”女</text>
 
-  <view class="item">
+ <view class="item">
   <image class="avatar" src="http://wx3.sinaimg.cn/mw690/7a128c67ly8fpxhyagnyej20ro0rojx1.jpg"></image>
     <view class="weiboinfo">
-    <text class="username">姈琅</text>
+    <text class="username">
+姈琅</text>
     <text class="weibo">揭露天盛官场惊天丑闻！数十官员脱衣逛青溟为哪般！细数魏知与楚王的权钱交易。</text>
   </view>
   </view>
 
-  <view class="item">
+   <view class="item">
   <image class="avatar" src="http://wx1.sinaimg.cn/mw690/6c4d56ccly8ft3c53h8otj20ro0ro400.jpg"></image>
-  <view class="weiboinfo">
-      <text class="username">梨春白</text>
-      <text class="weibo">宁弈狼心大盛，魏知宁死不屈——论演员的自我修养  第一讲</text>
+    <view class="weiboinfo">
+    <text class="username">
+梨春白</text>
+    <text class="weibo">宁弈狼心大盛，魏知宁死不屈——论演员的自我修养  第一讲</text>
   </view>
   </view>
   
 </view>
-
-

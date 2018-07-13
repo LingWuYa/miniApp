@@ -1,4 +1,3 @@
-/* pages/seven/seven.wxss */
 .head {
   width: 100%;
   display: flex;
@@ -38,6 +37,7 @@
   padding: 10px 10px;
   display: flex;
   flex-direction: row;
+  /* vertical-align: middle; */
 }
 .weiboinfo {
   display: flex;

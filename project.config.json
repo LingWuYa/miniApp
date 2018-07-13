@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -64,6 +64,18 @@
 					"name": "tvdetail-hq",
 					"pathName": "pages/tvs/tvdetail/tvdetail",
 					"query": "id=26761328&title=天盛长歌"
+				},
+				{
+					"id": 6,
+					"name": "day4",
+					"pathName": "pages/day4/day4",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "day1",
+					"pathName": "pages/seven/seven",
+					"query": ""
 				}
 			]
 		}
