@@ -1,14 +1,17 @@
 
 {
   "pages":[
-    "pages/day4/day4",
-    "pages/seven/seven",
     "pages/home/home",
     "pages/tvs/tvs",
     "pages/books/books",
+    "pages/books/bookDetail/bookDetail",
     "pages/shop/shop",
+    "pages/shop/goods/goods",
+    "pages/shop/goodDetail/goodDetail",
     "pages/mine/mine",
-    "pages/tvs/tvdetail/tvdetail"
+    "pages/tvs/tvdetail/tvdetail",
+    "pages/day4/day4",
+    "pages/seven/seven"
   ],
   "window": {
     "backgroundTextStyle": "light",
